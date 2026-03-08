@@ -1,0 +1,440 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 头部样式 */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.header-content .name {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.header-content .title {
+    font-size: 1.2em;
+    opacity: 0.95;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.contact-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* 区块样式 */
+.section {
+    padding: 40px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #667eea;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    font-weight: 700;
+}
+
+/* 教育背景 */
+.education-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.school {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.major {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.time {
+    color: #667eea;
+    font-weight: 500;
+}
+
+/* 课程标签 */
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.course-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.course-tag:hover {
+    transform: translateY(-2px);
+}
+
+/* 技能部分 */
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skill-category-title {
+    font-size: 1.3em;
+    color: #764ba2;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.skill-list {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.skill-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.skill-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* 项目经历 */
+.project-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #764ba2;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-name {
+    font-size: 1.4em;
+    color: #333;
+    font-weight: 700;
+}
+
+.project-time {
+    color: #667eea;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.project-repo {
+    margin-bottom: 15px;
+}
+
+.repo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.repo-link:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(5px);
+}
+
+.icon-small {
+    width: 16px;
+    height: 16px;
+}
+
+.project-stack {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    color: #555;
+}
+
+.project-desc {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.project-desc p {
+    color: #444;
+}
+
+.project-details {
+    margin-top: 15px;
+}
+
+.project-details ol {
+    padding-left: 20px;
+}
+
+.project-details li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* 个人优势 */
+.advantage-list {
+    display: grid;
+    gap: 20px;
+}
+
+.advantage-item {
+    display: flex;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateX(10px);
+}
+
+.advantage-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.advantage-content {
+    line-height: 1.7;
+    color: #444;
+}
+
+/* 职业愿景 */
+.vision-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    line-height: 2;
+}
+
+.vision-content p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+.vision-highlight {
+    font-weight: 600;
+    font-size: 1.1em !important;
+    margin-top: 20px !important;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 资质认证 */
+.certificate-list {
+    display: grid;
+    gap: 15px;
+}
+
+.certificate-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #764ba2;
+}
+
+.certificate-icon {
+    font-size: 2em;
+    flex-shrink: 0;
+}
+
+.certificate-content {
+    line-height: 1.7;
+    color: #444;
+}
+
+/* 底部 */
+.footer {
+    background: #f8f9fa;
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        border-radius: 15px;
+    }
+
+    .header {
+        padding: 40px 20px;
+    }
+
+    .header-content .name {
+        font-size: 2em;
+    }
+
+    .header-content .title {
+        font-size: 1em;
+    }
+
+    .section {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .advantage-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .course-list {
+        gap: 8px;
+    }
+
+    .course-tag {
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+}
+
+/* 打印优化 */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+}
